@@ -49,7 +49,7 @@ Profit?
 
 `-fm` / `--fragment_multiplier`: Affects the length of decoy fragments. This multiplier is applied to the length of decoy fragments, allowing for variability in their size compared to real shellcode fragments. A higher value results in longer decoy fragments.
 
-### Sample output:
+## Sample output:
 
 ```bash
 ./shellcode_obfuscator.py -s shellcode.c -dm 1 -c 1 -df mr.bean_wikipedia.html -min 50 -max 50 -fm 1
