@@ -51,6 +51,8 @@ Profit?
 
 ## Sample output:
 
+This is kept short for readability, it can easily generate thousands of lines with the options adjusted.
+
 ```bash
 ./shellcode_obfuscator.py -s shellcode.c -dm 1 -c 1 -df mr.bean_wikipedia.html -min 50 -max 50 -fm 1
 ```
