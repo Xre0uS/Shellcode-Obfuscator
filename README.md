@@ -1,4 +1,4 @@
-### WIP
+### This technique no longer works, it was useful a couple of years ago but AVs have gotten better since.
 Takes a given shellcode file (generated using msfvenom, for example), shuffle and randomise the shellcode, then generate a C source file to be compiled. 
 
 - Obfuscation Through Memory Manipulation: By using `memcpy` to dynamically assemble the shellcode in memory, effectively hiding the malicious code from static analysis tools.
